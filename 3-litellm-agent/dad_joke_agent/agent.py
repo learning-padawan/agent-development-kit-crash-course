@@ -5,9 +5,15 @@ from google.adk.agents import Agent
 from google.adk.models.lite_llm import LiteLlm
 
 # https://docs.litellm.ai/docs/providers/openrouter
+# model = LiteLlm(
+#     model="openrouter/openai/gpt-4.1",
+#     api_key=os.getenv("OPENROUTER_API_KEY"),
+# )
+
 model = LiteLlm(
-    model="openrouter/openai/gpt-4.1",
-    api_key=os.getenv("OPENROUTER_API_KEY"),
+    model="gpt-3.5-turbo-0125",  # o el modelo que prefieras
+    api_key=os.getenv("OPENAI_API_KEY"),  # tu API key de OpenAI
+    api_base="https://api.openai.com/v1",  # base URL por defecto de OpenAI
 )
 
 
